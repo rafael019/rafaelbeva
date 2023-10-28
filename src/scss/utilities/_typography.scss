@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+
+// font-family: 'IBM Plex Sans', sans-serif;
+// font-family: 'Inter', sans-serif;
+
+// Fonte IBM
+.font-ib-18 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.125rem;
+  font-size: 400; // Regular
+  line-height: 24px;
+}
+
+.font-ib-16-b,
+.font-ib-16 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  font-size: 400; // Regular
+  line-height: 24px;
+}
+
+.font-ib-16-b {
+  font-weight: 600;
+}
+
+// Fonte Inter
+.font-i-64 {
+  font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+  font-weight: 600; // Semibold
+  line-height: 120%;
+}
+
+.font-i-48 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 600; // Semibold
+  line-height: 64px;
+}
+
+.font-i-32 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700; // Semibold
+  line-height: 38px;
+}
+
+.font-i-24 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700; // Semibold
+  line-height: 32px;
+}
+
+@media(max-width:768px) {
+  .font-i-64 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width:640px) {
+  .font-i-64 {
+    font-size: 2.5rem;
+  }
+}

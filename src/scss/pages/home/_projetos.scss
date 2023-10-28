@@ -1,0 +1,85 @@
+.projetos {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  align-items: start;
+  gap: 40px;
+}
+
+.swiper {
+  width: 100%;
+}
+
+// .projetos-lista {
+//   width: 100%;
+// }
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 0.5px solid $cor-b1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $cor-v1;
+  border: 0.5px solid $cor-v1;
+}
+
+.projetos-item {
+  background: $cor-p2;
+  padding: 32px 30px;
+  border-radius: 5px;
+  margin-bottom: 56px;
+}
+
+.projetos-item h3 {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.projetos-item h3::before {
+  content: "";
+  display: inline-block;
+  background: linear-gradient(180deg, #E05060 0%, #CD4352 100%);
+  width: 5px;
+  height: 20px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.projetos-item h3:hover::before {
+  width: 8px;
+}
+
+.projetos-item p {
+  margin-bottom: 24px;
+}
+
+.projetos-item a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $cor-v1;
+}
+
+.projetos-item a::after {
+  content: "";
+  background: url('/dist/img/seta-2.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+
+.projetos-item a:hover::after {
+  margin-left: 10px;
+}
+
+@media (max-width:850px) {
+  .projetos {
+    grid-template-columns: 1fr;
+  }
+}

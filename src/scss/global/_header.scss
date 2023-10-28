@@ -1,0 +1,125 @@
+.header-bg {
+  background-image: url('/dist/img/bg-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.topo {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* Adicione a transição */
+  transition: padding 0.3s, background 0.3s;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-fixo {
+    background: rgba($color: #111, $alpha: 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    /* Adicione a mesma transição para garantir uma animação suave */
+    transition: padding 0.3s, background 0.3s;
+  }
+}
+
+.menu {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  a {
+    padding: 10px 0;
+
+    &::after {
+      content: "";
+      display: block;
+      background: $cor-v1;
+      width: 0%;
+      height: 2px;
+      margin-top: 8px;
+      transition: all 0.2s;
+    }
+
+    &:hover::after,
+    &.ativo:after {
+      width: 100%;
+    }
+  }
+}
+
+#menu {
+  &-mobile {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .menu {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    background: $cor-p1;
+    width: 100%;
+    height: calc(100% - 90px);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 99;
+
+    a {
+      display: inline-block;
+      padding: 5px 20px;
+    }
+  }
+
+  .ativo {
+    .menu {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+
+  #menu {
+    &-mobile {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border: 1px solid $cor-b1;
+      background: transparent;
+      color: $cor-b1;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &-linha {
+      border-top: 2px solid $cor-b1;
+      width: 20px;
+
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        background: $cor-b1;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

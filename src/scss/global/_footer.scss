@@ -1,0 +1,24 @@
+.rodape-bg {
+  background: $cor-p2;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 10px;
+}
+
+.redes-sociais li img {
+  transition: all 0.2s;
+}
+
+.redes-sociais li img:hover {
+  transform: rotate(5deg);
+}
