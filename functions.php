@@ -3,7 +3,6 @@ define('REQUIRE_PATH', get_stylesheet_directory());
 define('INCLUDE_PATH', get_stylesheet_directory_uri());
 define('THEME_VERSION', 1.0);
 
-require_once REQUIRE_PATH . '/core/plugins/wp-bootstrap-navwalker.php'; // Bootstra Navtalker
 require_once REQUIRE_PATH . '/core/gutenberg.php'; // Compatibilidade com Gutemberg
 require_once REQUIRE_PATH . '/core/load-css.php'; // Carrega arquivos CSS
 require_once REQUIRE_PATH . '/core/load-js.php'; // Carrega arquivos JavaScript
