@@ -7,13 +7,13 @@
   gap: 40px;
 }
 
-.contact-form {
+.wpcf7-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 40px;
 }
 
-.contact-form label {
+.wpcf7-form label {
   display: block;
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
@@ -22,12 +22,12 @@
   margin-bottom: 8px;
 }
 
-.contact-form .grid-2 {
+.wpcf7-form .grid-2 {
   grid-column: span 2;
 }
 
-.contact-form input,
-.contact-form textarea {
+.wpcf7-form input,
+.wpcf7-form textarea {
   border: 0;
   width: 100%;
   background: rgba($color: $cor-p2, $alpha: 0.6);
@@ -40,10 +40,49 @@
   font-weight: 500;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus {
   outline: none;
   border-bottom: 1px solid $cor-v1;
+}
+
+.wpcf7-form .wpcf7-submit {
+  max-width: max-content;
+  background: linear-gradient(180deg, #E05060 0%, #CD4352 100%);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem 2.5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  border: 0;
+  color: $cor-b1;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(180deg, #E05060 0%, #CD4352 80%);
+  }
+
+  &.seta {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background: url('../../dist/img/seta.svg');
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+      transition: all 0.2s;
+    }
+
+    &:hover::after {
+      transform: translateX(4px);
+    }
+  }
 }
 
 @media (max-width:850px) {
@@ -53,7 +92,7 @@
 }
 
 @media(max-width:600px) {
-  .contact-form {
+  .wpcf7-form {
     display: block;
   }
 }

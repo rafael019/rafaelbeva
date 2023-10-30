@@ -99,30 +99,8 @@ get_header(); ?>
     <h2 class="font-i-48 cor-b1">Contato<span class="detalhe">.</span></h2>
     <p class="font-ib-16">Tem interesse em contratar? Vamos conversar, preencha o formulário ao lado, entrarei em contato o mais breve possível.</p>
   </div>
-  <?= do_shortcode('[contact-form-7 id="03a5b70" title="Contato"]');?>
-  <form action="" method="post" class="contact-form" data-aos="fade-up" data-aos-duration="1000">
-    <div>
-      <label for="nome">Nome *</label>
-      <input type="text" name="nome" id="nome" placeholder="Ex. João Silva">
-    </div>
-    <div>
-      <label for="empresa">Empresa *</label>
-      <input type="text" name="empresa" id="empresa" placeholder="Ex. Agência Super">
-    </div>
-    <div>
-      <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" placeholder="ex. contato@agenciasuper.com.br">
-    </div>
-    <div>
-      <label for="telefone">Telefone</label>
-      <input type="tel" name="telefone" id="telefone" placeholder="ex. (99) 99999-9999">
-    </div>
-    <div class="grid-2">
-      <label for="descricao">Descrição</label>
-      <textarea name="descricao" id="descricao" cols="30" rows="5" placeholder="Informe o motivo do contato"></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Enviar Mensagem</button>
-  </form>
-
+  <div data-aos="fade-up" data-aos-duration="1000">
+    <?= do_shortcode('[contact-form-7 id="03a5b70" title="Contato"]'); ?>
+  </div>
 </section>
 <?php get_footer(); ?>
