@@ -33,7 +33,7 @@
   background: rgba($color: $cor-p2, $alpha: 0.6);
   padding: 20px;
   border-bottom: 1px solid $cor-b2;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   color: $cor-b2;
   font-size: 1rem;
@@ -44,6 +44,10 @@
 .wpcf7-form textarea:focus {
   outline: none;
   border-bottom: 1px solid $cor-v1;
+}
+
+.wpcf7-form textarea {
+  margin-bottom: 18px;
 }
 
 .wpcf7-form .wpcf7-submit {
@@ -83,6 +87,19 @@
       transform: translateX(4px);
     }
   }
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  grid-column: span 2;
+  padding: 15px 10px;
+  margin: 10px 0;
+  background: $cor-a1;
+  border-radius: 5px;
+  color: $cor-p2;
+}
+
+.wpcf7-not-valid-tip {
+  margin-bottom: 10px;
 }
 
 @media (max-width:850px) {
